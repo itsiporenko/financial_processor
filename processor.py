@@ -4,6 +4,7 @@ from instrument import get_instrument_processor
 from utils import is_business_day, parse_date
 
 def process_file(file_path):
+    '''Processing sample_input.csv applying rules for every instrument-type'''
     db = PriceModifierDB("modifiers.db")
     instrument_processors = {}
 

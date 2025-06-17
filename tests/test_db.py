@@ -3,6 +3,7 @@ import os
 from db import PriceModifierDB
 
 def setup_test_db(path):
+    '''Test INSTRUMENT_PRICE_MODIFIER creation'''
     conn = sqlite3.connect(path)
     cur = conn.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS INSTRUMENT_PRICE_MODIFIER (ID INTEGER PRIMARY KEY, NAME TEXT, MULTIPLIER REAL)")
@@ -11,6 +12,7 @@ def setup_test_db(path):
     conn.close()
 
 def test_get_multiplier(tmp_path):
+    '''Test Instrument type reading'''
     db_path = tmp_path / "test.db"
     setup_test_db(db_path)
     db = PriceModifierDB(str(db_path))

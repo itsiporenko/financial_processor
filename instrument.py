@@ -3,10 +3,41 @@ from statistics import mean
 import heapq
 
 class BaseInstrument:
-    def add_entry(self, date, value): raise NotImplementedError
-    def get_result(self): raise NotImplementedError
+    """
+    A class to represent an Instrument.
+
+    ...
+
+    Methods
+    -------
+    add_entry(self, date, value):
+        add into list instruments.
+    get_result(self):
+        get calculated result.
+    """
+    def add_entry(self, date, value):
+        raise NotImplementedError
+    def get_result(self):
+        raise NotImplementedError
 
 class Instrument1(BaseInstrument):
+    """
+    A class to represent an Instrument1.
+
+    ...
+
+    Attributes
+    ----------
+    value : list
+        list of Instrument1
+
+    Methods
+    -------
+    add_entry(self, date, value):
+        add into list Instruments1.
+    get_result(self):
+        get mean(avg) result.
+    """
     def __init__(self):
         self.values = []
 
