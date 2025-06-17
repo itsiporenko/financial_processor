@@ -1,0 +1,3 @@
+@echo off
+echo Running financial processor...
+python main.py
