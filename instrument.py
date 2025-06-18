@@ -6,10 +6,7 @@ class BaseInstrument:
     """
     A class to represent an Instrument.
 
-    ...
-
-    Methods
-    -------
+    Methods:
     add_entry(self, date, value):
         add into list instruments.
     get_result(self):
@@ -24,15 +21,11 @@ class Instrument1(BaseInstrument):
     """
     A class to represent an Instrument1.
 
-    ...
-
     Attributes
-    ----------
     value : list
         list of Instrument1
 
     Methods
-    -------
     add_entry(self, date, value):
         add into list Instruments1.
     get_result(self):

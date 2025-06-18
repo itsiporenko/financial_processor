@@ -23,7 +23,7 @@ financial_processor/
 ├── task/
 │   ├── example_input.txt        # Instruments-prices input sample(*.csv)
 │   ├── task1.txt                # Test task description
-└── sample_input.csv             # Input CSV file (or path to large file)
+└── sample_input.csv             # Input CSV file
 ```
 
 ## Instrument's price calculation rules
@@ -38,10 +38,10 @@ financial_processor/
 ```
 
 ## Design Highlights
- - Efficient memory usage (streaming)
+ - Efficient memory usage (reading by chunk)
  - Caching DB access with 5s TTL
- - Modular OO design for instrument behavior
- - SQLite file-based DB (portable)
+ - Modular OO design for Instrument behavior
+ - Using SQLite file-based DB
 
 ## Description of test-task:
 ```

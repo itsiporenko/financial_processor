@@ -17,7 +17,7 @@ def test_instrument3_variance():
     instr = Instrument3()
     for val in [2, 4, 4, 4, 5, 5, 7, 9]:
         instr.add_entry(datetime(2020, 1, 1), val)
-    assert round(instr.get_result(), 2) == 4.0  # sample variance with online Welford
+    assert round(instr.get_result(), 2) == 4.0
 
 def test_generic_instrument():
     instr = GenericInstrument()

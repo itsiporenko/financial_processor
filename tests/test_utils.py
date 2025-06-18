@@ -1,4 +1,3 @@
-import pytest
 from datetime import datetime
 from utils import parse_date, is_business_day
 

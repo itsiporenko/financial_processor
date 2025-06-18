@@ -33,7 +33,7 @@ class PriceModifierDB:
 
     def get_multiplier(self, name):
         current = time.time()
-        if current - self.last_refresh > 5:
+        if current - self.last_refresh > 5: #TTL 5s for caching
             self.refresh_cache()
             self.last_refresh = current
         return self.cache.get(name, 1.0)
